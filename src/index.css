@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Chakma&family=Noto+Sans+Bengali:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  background: #fafafa;
+  color: #111;
+}
+
+.dark body {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.chakma {
+  font-family: 'Noto Sans Chakma', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.chakma-lg {
+  font-family: 'Noto Sans Chakma', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.8;
+}
+
+.chakma-xl {
+  font-family: 'Noto Sans Chakma', sans-serif;
+  font-size: 4rem;
+  line-height: 1.6;
+}
+
+/* Bengali script (U+0980–U+09FF) — used for bangla and chakma_bn_script fields */
+.bengali {
+  font-family: 'Noto Sans Bengali', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.9;
+}
+
+.bengali-lg {
+  font-family: 'Noto Sans Bengali', sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.7;
+}
+
+.bengali-sm {
+  font-family: 'Noto Sans Bengali', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Hide scrollbar but keep scrolling */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* FlashCard 3D flip */
+.flip-card {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
